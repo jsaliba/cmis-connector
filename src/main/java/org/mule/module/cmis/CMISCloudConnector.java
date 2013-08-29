@@ -700,7 +700,7 @@ public class CMISCloudConnector implements CMISFacade {
      */
     @Override
     @Processor
-    public void delete(@Optional @Default("#[payload]") CmisObject cmisObject,
+    public void delete(@Optional CmisObject cmisObject,
                        @Optional String objectId,
                        @Optional @Default("false") boolean allVersions) {
         facade.delete(cmisObject, objectId, allVersions);
